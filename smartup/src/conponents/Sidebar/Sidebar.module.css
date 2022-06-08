@@ -1,0 +1,15 @@
+.sidebar{
+    width: 16rem;
+    position: absolute;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner{
+    font-size: 1.2rem;
+}
+
+.tab{
+    padding: 1rem;
+}
