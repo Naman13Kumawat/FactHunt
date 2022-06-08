@@ -1,0 +1,16 @@
+.container{
+    margin-left: 20rem;
+    padding: 2rem;
+    background-color: rgba(225, 225, 225, 0.649);
+}
+
+.heading{
+    padding: 1rem;
+}
+
+.discover{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 2rem;
+}
