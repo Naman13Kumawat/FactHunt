@@ -1,101 +1,128 @@
-.cross{
-    cursor: pointer;
+.cross {
+  cursor: pointer;
 }
 
-.sidebarContainer h2{
-    font-size:1rem;
+.sidebarContainer h2 {
+  font-size: 1rem;
 }
 
-.sidebarContainer h3{
-    font-size:0.9rem;
+.sidebarContainer h3 {
+  font-size: 0.9rem;
 }
 
-.active{
-    transform: translateX(-16rem);
+.active.sidebarContainer {
+  /* transform: translateX(-16rem); */
+  width: 5rem;
 }
+
+.active.sidebarContainer .sideItem{
+    width:fit-content;
+}
+
+.active.sidebarContainer .flex{
+    gap:0;
+}
+
+.active p, .active span, .active .bell, .active .hamburger {
+    display: none;
+}
+
 
 .sidebarContainer {
-    flex-direction: column;
-    position: absolute;
-    max-width: 16rem;
-    font-weight: 400;
-    gap: 0.1rem;
+  flex-direction: column;
+  position: absolute;
+  width: 20rem;
+  font-weight: 400;
+  gap: 0.1rem;
+  padding-top: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .itemContainer {
-    border-left: 2px solid transparent;
-    padding: 0 0.8rem;
+  border-left: 2px solid transparent;
+  padding: 0 0.8rem;
+}
+
+.itemContainer.active2{
+  border-left: 2px solid black;
 }
 
 .itemContainer:hover {
-    border-left: 2px solid black;
+  border-left: 2px solid black;
 }
 
 .sideItem {
-    border-radius: 6px;
-    cursor: pointer;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
 }
 
 .sideItem:hover {
-    background-color: #DFF6FF;
+  background-color: #dff6ff;
 }
 
-.sideItem.active {
-    background-color: #DFF6FF;
+.sideItem.active2 {
+  background-color: #dff6ff;
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .sidebarContainer .flex {
-    gap: 1rem;
-    align-items: center;
+  gap: 1rem;
+  align-items: center;
 }
 
 .sItem2 {
-    justify-content: flex-start;
-    gap: 1rem;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .sideBarNotification {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-size: 0.7rem;
-    height: fit-content;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 0.7rem;
+  height: fit-content;
 }
 
-.active .sideBarNotification {
-    background-color: blue;
-    border-radius: 15px;
-    color: white;
-    padding: 0.2rem 0.8rem;
+.active2 .sideBarNotification {
+  background-color: rgb(74, 184, 252);
+  color: #fff;
+  width: 1.5rem;
+  padding: 2px 5px;
+  border-radius: 50px;
 }
 
-.profilePic{
-    width: 2rem;
-    border-radius: 50px;
+.profilePic {
+  width: 2rem;
+  border-radius: 50px;
 }
 
-.bell{
-    height: 1rem;
-    width: 1rem;
-    fill: #fff;
-    background-color: rgb(255, 98, 0);
-    padding: 0.2rem;
-    border-radius: 50%;
+.bell {
+  height: 1rem;
+  width: 1rem;
+  fill: #fff;
+  background-color: rgb(255, 98, 0);
+  padding: 0.2rem;
+  border-radius: 50%;
 }
 
-.customSvg{
-    height: 1rem;
-    width: 1rem;
+.customSvg {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-.photo{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50px;
+.photo {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50px;
 }
+
+.hamburger {
+  cursor: pointer;
+  margin-left: auto;
+}
+

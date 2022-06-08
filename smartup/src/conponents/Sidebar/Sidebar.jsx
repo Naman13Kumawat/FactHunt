@@ -1,39 +1,52 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
 import Footer from "../Footer/Footer.jsx";
-import discover_style from "../Discover/Discover.module.css";
-
+import discoverStyles from "../Discover/Discover.module.css";
+import footerStyle from "../Footer/Footer.module.css";
 export default function Sidebar() {
   const handleClick = () => {
     document.getElementById("sidebar").classList.toggle(`${styles.active}`);
     document
-      .getElementById("hamburger")
-      .classList.toggle(`${discover_style.active}`);
+      .getElementById("discover")
+      .classList.toggle(`${discoverStyles.active}`);
+    document
+      .getElementById("socials")
+      .classList.toggle(`${footerStyle.active}`);
   };
 
   return (
-    <div className={`${styles.flex} ${styles.sidebarContainer}`}>
-      <div className={`${styles.cross}`} onClick={handleClick}>
-        X
-      </div>
+    <div className={`${styles.flex} ${styles.sidebarContainer}`} id="sidebar">
       <div className={styles.itemContainer}>
         <div className={`${styles.sideItem} ${styles.sItem1}`}>
           <div className={styles.flex}>
-            <img src="" alt="" />
+            <svg
+              onClick={handleClick}
+              className={styles.customSvg}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path d="M160 80C160 53.49 181.5 32 208 32H240C266.5 32 288 53.49 288 80V432C288 458.5 266.5 480 240 480H208C181.5 480 160 458.5 160 432V80zM0 272C0 245.5 21.49 224 48 224H80C106.5 224 128 245.5 128 272V432C128 458.5 106.5 480 80 480H48C21.49 480 0 458.5 0 432V272zM400 96C426.5 96 448 117.5 448 144V432C448 458.5 426.5 480 400 480H368C341.5 480 320 458.5 320 432V144C320 117.5 341.5 96 368 96H400z" />
+            </svg>
             <p>SmartUp</p>
+            <div className={styles.hamburger} onClick={handleClick}>
+              <svg
+                className={styles.customSvg}
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
+              </svg>
+            </div>
           </div>
-          {/* <img src="" alt="" /> Hamburger */}
         </div>
       </div>
 
       <div className={styles.itemContainer}>
         <div className={`${styles.sideItem} ${styles.sItem1} ${styles.flex}`}>
           <div className={styles.flex}>
-            <img
-              className={`${styles.profilePic}`}
-              src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
-              alt="profile pic"
-            />
+            <svg className={styles.customSvg} onClick={handleClick} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z" />
+            </svg>
             <p>Profile</p>
           </div>
           <div className={styles.flex}>
@@ -49,11 +62,11 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div className={styles.itemContainer}>
-        <div className={`${styles.flex} ${styles.sideItem}`}>
+      <div className={`${styles.itemContainer} ${styles.active2}`}>
+        <div className={`${styles.flex} ${styles.sideItem} ${styles.active2}`}>
           <div className={styles.flex}>
             <svg
-              className={styles.customSvg}
+              className={styles.customSvg} onClick={handleClick}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 576 512"
             >
@@ -61,7 +74,11 @@ export default function Sidebar() {
             </svg>
             <p>Discover</p>
           </div>
-          <span className={styles.sideBarNotification}>24</span>
+          <span
+            className={`${styles.discover_Noti} ${styles.sideBarNotification}`}
+          >
+            24
+          </span>
         </div>
       </div>
 
@@ -69,7 +86,7 @@ export default function Sidebar() {
         <div className={`${styles.flex} ${styles.sideItem}`}>
           <div className={styles.flex}>
             <svg
-              className={styles.customSvg}
+              className={styles.customSvg} onClick={handleClick}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
             >
@@ -83,7 +100,7 @@ export default function Sidebar() {
       <div className={styles.itemContainer}>
         <div className={`${styles.sideItem} ${styles.flex} ${styles.sItem2}`}>
           <img
-            className={styles.photo}
+            className={styles.photo} onClick={handleClick}
             src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg"
             alt="Profile pic"
           />
@@ -94,7 +111,7 @@ export default function Sidebar() {
       <div className={styles.itemContainer}>
         <div className={`${styles.sideItem} ${styles.flex} ${styles.sItem2}`}>
           <img
-            className={styles.photo}
+            className={styles.photo} onClick={handleClick}
             src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg"
             alt="Profile pic"
           />
@@ -106,7 +123,7 @@ export default function Sidebar() {
       <div className={styles.itemContainer}>
         <div className={`${styles.sideItem} ${styles.flex} ${styles.sItem2}`}>
           <img
-            className={styles.photo}
+            className={styles.photo} onClick={handleClick}
             src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg"
             alt="Profile pic"
           />
@@ -118,7 +135,7 @@ export default function Sidebar() {
       <div className={styles.itemContainer}>
         <div className={`${styles.sideItem} ${styles.flex} ${styles.sItem2}`}>
           <img
-            className={styles.photo}
+            className={styles.photo} onClick={handleClick}
             src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg"
             alt="Profile pic"
           />
@@ -130,7 +147,11 @@ export default function Sidebar() {
       <div className={styles.itemContainer}>
         <div className={`${styles.flex} ${styles.sideItem}`}>
           <div className={styles.flex}>
-            <svg className={styles.customSvg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <svg
+              className={styles.customSvg} onClick={handleClick}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
               <path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z" />
             </svg>
 
