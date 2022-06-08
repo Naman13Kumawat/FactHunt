@@ -1,15 +1,101 @@
-.sidebar{
-    width: 16rem;
-    position: absolute;
-    padding: 2rem;
-    display: flex;
+.cross{
+    cursor: pointer;
+}
+
+.sidebarContainer h2{
+    font-size:1rem;
+}
+
+.sidebarContainer h3{
+    font-size:0.9rem;
+}
+
+.active{
+    transform: translateX(-16rem);
+}
+
+.sidebarContainer {
     flex-direction: column;
+    position: absolute;
+    max-width: 16rem;
+    font-weight: 400;
+    gap: 0.1rem;
 }
 
-.banner{
-    font-size: 1.2rem;
+.itemContainer {
+    border-left: 2px solid transparent;
+    padding: 0 0.8rem;
 }
 
-.tab{
-    padding: 1rem;
+.itemContainer:hover {
+    border-left: 2px solid black;
+}
+
+.sideItem {
+    border-radius: 6px;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.sideItem:hover {
+    background-color: #DFF6FF;
+}
+
+.sideItem.active {
+    background-color: #DFF6FF;
+}
+
+.flex {
+    display: flex;
+}
+
+.sidebarContainer .flex {
+    gap: 1rem;
+    align-items: center;
+}
+
+.sItem2 {
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.sideBarNotification {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 0.7rem;
+    height: fit-content;
+}
+
+.active .sideBarNotification {
+    background-color: blue;
+    border-radius: 15px;
+    color: white;
+    padding: 0.2rem 0.8rem;
+}
+
+.profilePic{
+    width: 2rem;
+    border-radius: 50px;
+}
+
+.bell{
+    height: 1rem;
+    width: 1rem;
+    fill: #fff;
+    background-color: rgb(255, 98, 0);
+    padding: 0.2rem;
+    border-radius: 50%;
+}
+
+.customSvg{
+    height: 1rem;
+    width: 1rem;
+}
+
+.photo{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
 }

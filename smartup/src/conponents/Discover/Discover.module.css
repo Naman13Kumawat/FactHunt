@@ -1,6 +1,6 @@
 .container{
     margin-left: 20rem;
-    padding: 2rem;
+    padding: 0 2rem;
     background-color: rgba(225, 225, 225, 0.649);
 }
 
@@ -13,4 +13,21 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 2rem;
+}
+
+.hamburger{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.hamburger svg{
+    height: 1.5rem;
+}
+
+.active{
+    opacity: 1;
+}
+
+.container.active{
+    margin-left:0;
 }
