@@ -2,6 +2,8 @@
 
 A Single Page Application displaying news using API calls.
 
+Link to live website: https://fact-hunt.vercel.app/
+
 Technologies Used: React.js, AXIOS
 
 Assignment submitted to FactHunt.
